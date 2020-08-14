@@ -11,7 +11,11 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="bg-black">
+    <nav class="navbar d-flex navbar-light">
+      <p>LOGO</p>
+      <%= link_to "Add a cocktail", new_cocktail_path %>
+    </nav>
     <%= yield %>
   </body>
 </html>

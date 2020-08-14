@@ -9,6 +9,14 @@ require("@rails/activestorage").start()
 require("channels")
 
 import 'bootstrap';
+import $ from "jquery";
+import select2 from "select2";
+
+import 'select2/dist/css/select2.css';
+
+$(document).ready(function() {
+    $('#dose_ingredient_id').select2();
+});
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
