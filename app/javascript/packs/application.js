@@ -14,9 +14,11 @@ import select2 from "select2";
 
 import 'select2/dist/css/select2.css';
 
-$(document).ready(function() {
+const a = () => {
+  $(document).ready(function() {
     $('#dose_ingredient_id').select2();
 });
+};
 
 // Uncomment to copy all static images under ../images to the output folder and reference
 // them with the image_pack_tag helper in views (e.g <%= image_pack_tag 'rails.png' %>)
@@ -24,3 +26,11 @@ $(document).ready(function() {
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+window.addEventListener('scroll', (event) => {
+  if (window.scrollY >= window.innerHeight*0.75) {
+    document.querySelector('nav').style.display = "flex";
+  }
+});
+
+a();

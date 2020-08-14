@@ -1,16 +1,20 @@
 
-<div class="container">
-  <div class="cards">
-    <% @cocktails.each do |cocktail| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-        <%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: "text-decoration: none;"%>
-      </div>
-    <% end %>
+<div class="img-container">
+  <div class="inner-container">
+    <h1>Mister Cocktail</h1>
+    <p>Le site référence de recettes de cocktails</p>
+    <%= link_to "Add a new cocktail", new_cocktail_path, class: "bouton"%>
   </div>
 </div>
 
 
-
-
-
-
+<div class="conteneur">
+  <h1>Toutes les recettes</h1>
+  <div class="cards">
+    <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
+        <%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: "text-decoration-none"%>
+      </div>
+    <% end %>
+  </div>
+</div>

@@ -1,11 +1,13 @@
-.navbar-lewagon {
+.nav {
+  position: sticky;
+  top: 0;
+  display: none;
+  align-items: center;
   justify-content: space-between;
-}
-
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+  background-color: #1A0A0A;
+  a {
+    margin: 0;
+    margin-right: 32px;
+  }
+  transition: display 0.2s ease-out;
 }
