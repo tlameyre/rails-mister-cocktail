@@ -1,6 +1,7 @@
 
 <div class="img-container">
   <div class="inner-container">
+    <%= image_tag 'banner-logo', class: "image-banner"%>
     <h1>Mister Cocktail</h1>
     <p>Le site référence de recettes de cocktails</p>
     <%= link_to "Add a new cocktail", new_cocktail_path, class: "bouton"%>
@@ -10,11 +11,25 @@
 
 <div class="conteneur">
   <h1>Toutes les recettes</h1>
-  <img src="https://res.cloudinary.com/dbkqupabo/image/upload/v1597426855/g7baa8nwdqylr66xovyv.jpg" alt="">
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo.key %>)">
-        <%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: "text-decoration: none;"%>
+      <div class="property-card">
+        <a href="/cocktails/<%= cocktail.id %>">
+          <div class="property-image" style="background-image: url(<%= cl_image_path cocktail.photo.key %>)">
+            <div class="property-image-title">
+              <h5><%= cocktail.name %></h5>
+            </div>
+          </div>
+        </a>
+        <div class="property-description">
+          <h5><%= cocktail.name %></h5>
+          <p>Lorem Ipsum Dipsum hortata</p>
+        </div>
+        <a href="#">
+          <div class="property-social-icons">
+            <!-- I would usually put multipe divs inside here set to flex. Some people might use Ul li. Multiple Solutions -->
+          </div>
+        </a>
       </div>
     <% end %>
   </div>

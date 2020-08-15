@@ -12,13 +12,23 @@
 @import "components/index";
 @import "pages/index";
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+
 * {
   margin: 0;
 }
 
-body {
+body, h1, h2, h5{
   width: 100%;
   color: #1A0A0A;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.image-banner {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 40px;
 }
 .conteneur {
   margin: 0 35vh;
@@ -42,11 +52,14 @@ body {
   width: 100%;
   color: white;
   height: auto;
+  h1 {
+    color: white;
+  }
 }
 
 .bouton {
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 35px;
   display: inline-block;
   width: 200px;
   font-weight: bold;

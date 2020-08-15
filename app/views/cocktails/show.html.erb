@@ -8,10 +8,10 @@
     </div>
     <div class="infos">
       <div class="ingredients">
+        <% if @cocktail.photo.attached? %>
+          <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <% end %>
         <% @doses.each do |dose| %>
-          <% if @cocktail.photo.attached? %>
-            <%= cl_image_tag @cocktail.photo.key, width: 400, height: 300, crop: :fill %>
-          <% end %>
           <p><%= dose.ingredient.name %> - <%= dose.description %> | <%= link_to "Delete this ingredient", dose_path(dose), method: :delete %></p>
         <% end %>
         <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %>
