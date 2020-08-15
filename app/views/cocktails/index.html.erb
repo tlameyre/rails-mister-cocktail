@@ -10,10 +10,11 @@
 
 <div class="conteneur">
   <h1>Toutes les recettes</h1>
+  <img src="https://res.cloudinary.com/dbkqupabo/image/upload/v1597426855/g7baa8nwdqylr66xovyv.jpg" alt="">
   <div class="cards">
     <% @cocktails.each do |cocktail| %>
-      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/dinner.jpg)">
-        <%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: "text-decoration-none"%>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path cocktail.photo.key %>)">
+        <%= link_to "#{cocktail.name}", cocktail_path(cocktail), class: "text-decoration: none;"%>
       </div>
     <% end %>
   </div>

@@ -19,11 +19,11 @@ ingredients['drinks'].each do |ingredient|
   new_ingredient.save!
 end
 
-puts 'Creating Cocktails'
-['Lavish Wine', 'Almond Cider', 'Wasabi Bear', 'Elemental Nectar', 'Sherry Twilight',
- 'Lavender Roar', 'Obvious Blizzard', 'First Dark Ale',
- 'Red White Wine', 'Cherry Night'].each do |cocktail|
-  new_cocktail = Cocktail.new(name: cocktail)
-  new_cocktail.save!
-end
+# puts 'Creating Cocktails'
+# ['Lavish Wine', 'Almond Cider', 'Wasabi Bear', 'Elemental Nectar', 'Sherry Twilight',
+#  'Lavender Roar', 'Obvious Blizzard', 'First Dark Ale',
+#  'Red White Wine', 'Cherry Night'].each do |cocktail|
+#   new_cocktail = Cocktail.new(name: cocktail)
+#   new_cocktail.save!
+# end
 puts 'Finished'

@@ -30,6 +30,8 @@ const a = () => {
 window.addEventListener('scroll', (event) => {
   if (window.scrollY >= window.innerHeight*0.75) {
     document.querySelector('nav').style.display = "flex";
+  } else {
+    document.querySelector('nav').style.display = "none";
   }
 });
 
