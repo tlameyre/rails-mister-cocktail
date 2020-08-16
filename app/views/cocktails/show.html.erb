@@ -1,8 +1,10 @@
 <div class="contenu">
   <% if @cocktail.photo.attached? %>
     <div class="image" style="background-image: url(<%= cl_image_path @cocktail.photo.key, height: 500%>)">
-    </div>
+  <% else %>
+    <div class="image" style="background-image: url(<%= cl_image_path 'sample', height: 500%>)">
   <% end %>
+  </div>
   <div class="texte">
     <div class="titre">
       <h2><%= @cocktail.name %></h2>
