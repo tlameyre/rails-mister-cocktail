@@ -57,7 +57,7 @@ h1, h2, h3, h5 {
   width: 100%;
   color: $vanilla;
   height: auto;
-  h1 {
+  h1, p {
     color: $vanilla;
     text-shadow: 1px 1px 3px rgba(26,10,10,0.8);
   }
@@ -86,5 +86,8 @@ h1, h2, h3, h5 {
 @media(max-width: 992px) {
   .conteneur {
     margin: 0px 75px;
+  }
+  .img-container {
+    background-position-x: -100px;
   }
 }
