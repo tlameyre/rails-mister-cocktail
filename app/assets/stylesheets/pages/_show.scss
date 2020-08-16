@@ -49,3 +49,18 @@
 .recette p {
   text-align: left;
 }
+
+@media(max-width: 992px) {
+  .contenu {
+    width: 750px;
+    display: grid;
+  }
+  .image {
+    height: 400px;
+  }
+  .infos {
+    display: grid;
+    text-align: center;
+    width: 670px;
+  }
+}

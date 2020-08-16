@@ -7,3 +7,13 @@
 }
 .simple_form {
   padding: 16px;}
+
+@media(max-width: 992px) {
+  .conteneur-form {
+    margin: 16px;
+  }
+
+  .simple_form .bouton {
+    margin: 54px;
+  }
+}

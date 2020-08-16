@@ -8,8 +8,24 @@
   background-color: #1A0A0A;
   border-bottom: 2px solid $vanilla;
   a {
-    margin: 0;
-    margin-right: 32px;
+    margin: 0 32px 0 0;
   }
   transition: display 0.2s ease-out;
+}
+
+@media(max-width: 992px) {
+  .nav {
+    justify-content: center;
+    a {
+      margin: 0 0 0 0;
+    }
+    img {
+      height: 90px;
+      width: 180px;
+    }
+    .bouton {
+      margin-bottom: 16px;
+      margin-top: -8px;
+    }
+  }
 }
