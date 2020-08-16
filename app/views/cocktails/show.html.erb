@@ -1,26 +1,26 @@
 <div class="contenu">
+  <% if @cocktail.photo.attached? %>
+    <div class="image" style="background-image: url(<%= cl_image_path @cocktail.photo.key, height: 500%>)">
+    </div>
+  <% end %>
   <div class="texte">
     <div class="titre">
-      <h1><%= @cocktail.name %></h1>
-      <div class="categorie">
-        <span>Cocktail</span>
-      </div>
+      <h2><%= @cocktail.name %></h2>
+      <span>Cocktail</span>
     </div>
     <div class="infos">
       <div class="ingredients">
-        <% if @cocktail.photo.attached? %>
-          <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
-        <% end %>
+        <h3>Ingredients</h3>
         <% @doses.each do |dose| %>
-          <p><%= dose.ingredient.name %> - <%= dose.description %> | <%= link_to "Delete this ingredient", dose_path(dose), method: :delete %></p>
+          <p><%= dose.ingredient.name %> - <%= dose.description %> | <%= link_to ("<i class='fas fa-trash-alt'></i>").html_safe, dose_path(dose), method: :delete %></p>
         <% end %>
-        <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %>
+        <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail), class: 'bouton' %>
       </div>
       <div class="recette">
-
+        <h3>Recette</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta quae minima officiis magni quasi dolore mollitia ullam doloribus voluptatem iste, ut, vel debitis? Distinctio officiis, possimus nam quis quae dolore.</p>
       </div>
 
     </div>
   </div>
-  <%= link_to "Go back", root_path %>
 </div>

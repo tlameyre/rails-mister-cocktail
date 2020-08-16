@@ -1,0 +1,51 @@
+.contenu {
+  display: flex;
+  height: calc(100vh - 100px);
+  background-color: $chocolate;
+  * {
+    color: $vanilla;
+  }
+}
+
+.image, .texte {
+  width: 50%;
+  padding: 40px;
+}
+.image {
+  padding: 60px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.titre {
+  height: 40%;
+  border-bottom: solid 2px $vanilla;
+  h2 {
+    font-size: 72px;
+  }
+}
+
+.infos {
+  height: 60%;
+  display: flex;
+  h3 {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+.ingredients, .recette {
+  width: 50%;
+  padding-right: 32px;
+  padding-top: 32px;
+  text-align:center;
+  p {
+    margin-bottom: 32px;
+  }
+}
+
+.recette p {
+  text-align: left;
+}
