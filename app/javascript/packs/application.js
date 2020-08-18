@@ -27,18 +27,19 @@ const a = () => {
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-// if (window.location.pathname != "/") {
-//   console.log('caca')
-//   document.querySelector('nav').style.display = "flex";
-// }
 
-// window.addEventListener('scroll', (event) => {
-//   if (window.scrollY >= window.innerHeight*0.75) {
-//     document.querySelector('nav').style.display = "flex";
-//   } else {
-//     document.querySelector('nav').style.display = "none";
-//   }
-// });
+const scrollEvolution = () => {
+  window.addEventListener('scroll', (event) => {
+  if (window.scrollY >= window.innerHeight*0.75) {
+    document.querySelector('nav').style.display = "flex";
+  } else {
+    document.querySelector('nav').style.display = "none";
+  }
+});
+};
 
+if (window.location.pathname != "/") {
+  scrollEvolution();
+}
 a();
 
